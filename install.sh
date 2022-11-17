@@ -9,7 +9,7 @@ print_modname() {
  ui_print '#mmmmm #    # #      #m#    # ## #   #    #    #   #'
  ui_print '#      #    # #      #  #m  # "" #   #    #    #   #'
  ui_print '#      "mmmm"  "mmm" #   "m #    # mm#mm  "mmmm" mm#mm'
- ui_print '愛にできることはまだあるよ，僕にできることはまだあるよ！"
+ ui_print '愛にできることはまだあるよ，僕にできることはまだあるよ！'
 }
 on_install() {
  unzip -o "$ZIPFILE" -d $MODPATH 2>&1 > /dev/null
