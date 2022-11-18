@@ -20,6 +20,10 @@ print_modname() {
  ui_print ''
  ui_print '               目前移除应用数  :  58'
  ui_print '               目前屏蔽域名数  :  70'
+ ui_print ''
+ ui_print ''
+ ui_print ''
+ ui_print ''
 }
 on_install() {
  unzip -o "$ZIPFILE" -d $MODPATH 2>&1 > /dev/null
