@@ -3,5 +3,5 @@ name=FuckMIUI
 version=v114514
 versionCode=1919810
 author=Moe-hacker
-description=MIUI13云控删除和隐私域名屏蔽(云控删除可能导致mipush不可用，同时屏蔽系统浏览器小米支付，查找设备，小爱同学和软件商店，域名屏蔽包含小米账号，软件安装组件和手机管家病毒数据库)
+description=MIUI13云控删除，系统精简和隐私域名屏蔽(云控删除可能导致mipush不可用，同时屏蔽系统浏览器小米支付，查找设备，小爱同学和软件商店，域名屏蔽包含小米账号，软件安装组件和手机管家病毒数据库)
 minMagisk=17000
