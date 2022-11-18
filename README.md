@@ -5,7 +5,7 @@
 &emsp;手里的10U刚刷回MIUI就接到了你懂的电话，细思即恐，遂结合进程列表、部分应用反编译结果、小黄鸟抓包内容制作此模块。         
 &emsp;此模块同时对系统进行精简，建议配合不许卡米/核心破解使用。         
 &emsp;我们应该从手机厂商手中夺回属于自己的隐私，我们有权利这么做，现在，通过magisk，我们有了能力。        
-&emsp;本模块测试环境MIUI 13 22.10.26     
+&emsp;本模块测试环境MIUI 13 22.10.26，核心破解3.9。     
 <p align="center">愛にできることはまだあるよ，</p>              
 <p align="center">僕にできることはまだあるよ！</p>        
 
@@ -29,16 +29,17 @@ Magisk刷入release中的模块即可。
 - 小米支付        
 - 查找设备        
 ### 具体删除内容：         
-- 一个二进制程序:        
-```
+- 二进制程序:        
+```text
 /system/bin/logd
+/vendor/bin/subsystem_ramdump
 ```
-- 一个二进制库(貌似没必要):        
-```
+- 二进制库(貌似没必要，懒得删了):        
+```text
 /system/app/Joyose/lib/arm64/libprofilemanager-jni.so
 ```
 - 系统软件包:             
-```
+```text
 /system/app/AnalyticsCore/AnalyticsCore.apk
 /system/app/CarWith/CarWith.apk
 /system/app/CatchLog/CatchLog.apk
@@ -58,7 +59,6 @@ Magisk刷入release中的模块即可。
 /system/app/MiBugReport/MiBugReport.apk
 /system/app/MiCloudSync/MiCloudSync.apk
 /system/app/MiConnectService/MiConnectService.apk
-/system/app/MiLink/MiLink.apk
 /system/app/MiuiPaymentService/MiuiPaymentService.apk
 /system/app/MiuiPrintSpoolerBeta/MiuiPrintSpoolerBeta.apk
 /system/app/ModemTestBox/ModemTestBox.apk
@@ -75,8 +75,10 @@ Magisk刷入release中的模块即可。
 /system/app/com.xiaomi.macro/com.xiaomi.macro.apk
 /system/app/MITSMClient/MITSMClient.apk
 /system/app/MIUIPrivacyComputing/MIUIPrivacyComputing.apk
-/system/app/XiaomiModemDebugService/XiaomiModemDebugService.apk
 /system/app/com.miui.qr/com.miui.qr.apk
+/system/app/MiLink/MiLink.apk
+/system/app/XiaomiModemDebugService/XiaomiModemDebugService.apk
+/system/app/MiDevAuthService/MiDevAuthService.apk
 /system/priv-app/BuiltInPrintService/BuiltInPrintService.apk
 /system/priv-app/CloudBackup/CloudBackup.apk
 /system/priv-app/FindDevice/FindDevice.apk
@@ -91,10 +93,13 @@ Magisk刷入release中的模块即可。
 /system/priv-app/MIUIVideo/MIUIVideo.apk
 /system/priv-app/MIUIMusic/MIUIMusic.apk
 /system/priv-app/MIUIQuickSearchBox/MIUIQuickSearchBox.apk
+/system/priv-app/DMRegService/DMRegService.apk
 /system/product/app/mi_aiasst_service/mi_aiasst_service.apk
 /system/vendor/app/MipayService/MipayService.apk
+/system_ext/priv-app/Polaris/Polaris.apk
+/system_ext/app/SecurityOnetrackService/SecurityOnetrackService.apk
 ```
-#### 域名屏蔽：         
+- 域名屏蔽：         
 ```text
 api.installer.xiaomi.com
 beacon-api.aliyuncs.com
