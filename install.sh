@@ -18,7 +18,7 @@ print_modname() {
  ui_print '愛にできることはまだあるよ，僕にできることはまだあるよ！'
  ui_print ''
  ui_print ''
- ui_print '- 目前移除应用数  :  58+2'
+ ui_print '- 目前移除应用数  :  57+2'
  ui_print '- 目前屏蔽域名数  :  70'
  ui_print ''
  ui_print ''
