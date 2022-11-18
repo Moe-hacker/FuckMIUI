@@ -61,7 +61,6 @@ Magisk刷入release中的模块即可。
 /system/app/MIpay/MIpay.apk
 /system/app/MSA/MSA.apk
 /system/app/MaintenanceMode/MaintenanceMode.apk
-/system/app/MetokNLP/MetokNLP.apk
 /system/app/MiBugReport/MiBugReport.apk
 /system/app/MiCloudSync/MiCloudSync.apk
 /system/app/MiConnectService/MiConnectService.apk
