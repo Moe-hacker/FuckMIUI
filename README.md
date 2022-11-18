@@ -58,6 +58,7 @@ Magisk刷入release中的模块即可。
 /system/app/MiBugReport/MiBugReport.apk
 /system/app/MiCloudSync/MiCloudSync.apk
 /system/app/MiConnectService/MiConnectService.apk
+/system/app/MiLink/MiLink.apk
 /system/app/MiuiPaymentService/MiuiPaymentService.apk
 /system/app/MiuiPrintSpoolerBeta/MiuiPrintSpoolerBeta.apk
 /system/app/ModemTestBox/ModemTestBox.apk
@@ -74,6 +75,7 @@ Magisk刷入release中的模块即可。
 /system/app/com.xiaomi.macro/com.xiaomi.macro.apk
 /system/app/MITSMClient/MITSMClient.apk
 /system/app/MIUIPrivacyComputing/MIUIPrivacyComputing.apk
+/system/app/XiaomiModemDebugService/XiaomiModemDebugService.apk
 /system/app/com.miui.qr/com.miui.qr.apk
 /system/priv-app/BuiltInPrintService/BuiltInPrintService.apk
 /system/priv-app/CloudBackup/CloudBackup.apk
