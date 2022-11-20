@@ -1,3 +1,4 @@
+#安装脚本
 SKIPMOUNT=false
 LATESTARTSERVICE=false
 POSTFSDATA=false
@@ -26,8 +27,6 @@ print_modname() {
 }
 on_install() {
  unzip -o "$ZIPFILE" -d $MODPATH 2>&1 > /dev/null
- #没想到吧，这里也有玄学优化
- settings put global hide_error_dialogs 1
 }
 set_permissions() {
  set_perm_recursive $MODPATH 0 0 0755 0644
