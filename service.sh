@@ -77,6 +77,56 @@ FuckMIUI(){
   echo 0 > /sys/module/subsystem_restart/parameters/enable_mini_ramdumps
   echo 0 > /sys/block/mmcblk0/queue/nomerges
   echo 0 > /sys/block/mmcblk0rpmb/queue/nomerges
+  #隐私夺取相关，有没有效果我也不知道
+  echo 114514191981 > /sdcard/deviceId.txt
+  #删除部分系统和软件拉的💩
+  #什么你说这不会是格机吧？
+  #这年代还有用rm格机的？dd我都嫌太老了，事实上重定向格机就是我发现的，第一个测试实例也是我搞的，真想搞破坏我肯定不用rm，echo配合重定向比那东西快多了，这也是为什么我注销那个号的原因
+  rm -rf /data/*.log
+  rm -rf /data/adb/lspd/log/*.log
+  rm -rf /data/vendor/wlan_logs
+  rm -rf /data/vendor/charge_logger/*
+  rm -rf /data/*.txt
+  rm -rf /cache/*.apk
+  rm -rf /data/anr/*
+  rm -rf /data/backup/pending/*.tmp
+  rm -rf /data/cache/*.*
+  rm -rf /data/data/*.log
+  rm -rf /data/data/*.txt
+  rm -rf /data/log/*.log
+  rm -rf /data/log/*.txt
+  rm -rf /data/local/*.apk
+  rm -rf /data/local/*.log
+  rm -rf /data/local/*.txt
+  rm -rf /data/mlog/*
+  rm -rf /data/system/*.log
+  rm -rf /data/system/*.txt
+  rm -rf /data/system/dropbox/*
+  rm -rf /data/system/usagestats/*
+  rm -rf /data/system/shared_prefs/*
+  rm -rf /data/tombstones/*
+  rm -rf /sdcard/LOST.DIR
+  rm -rf /sdcard/found000
+  rm -rf /sdcard/LazyList
+  rm -rf /sdcard/albumthumbs
+  rm -rf /sdcard/kunlun
+  rm -rf /sdcard/.CacheOfEUI
+  rm -rf /sdcard/.bstats
+  rm -rf /sdcard/.taobao
+  rm -rf /sdcard/Backucup
+  rm -rf /sdcard/MIUI/debug_log
+  rm -rf /sdcard/ramdump
+  rm -rf /sdcard/UnityAdsVideoCache
+  rm -rf /sdcard/*.log
+  rm -rf /sdcard/*.CHK
+  rm -rf /sdcard/duilite
+  rm -rf /sdcard/DkMiBrowserDemo
+  rm -rf /sdcard/.xlDownload
+  rm -rf /sdcard/.UTSystemConfig
+  rm -rf /sdcard/.tbs
+  rm -rf /sdcard/DCIM/.tmfs
+  #尝试夺取隐私，虽然大概率没啥用
+  touch /sdcard/DCIM/.tmfs
   #杀死部分进程，后台压制对电流无任何帮助，因此杀一次求个安慰
   for shit in com.miui.securitycenter.remote com.miui.securitycenter com.miui.contentcatcher com.mobiletools.systemhelper:register com.android.htmlviewer:remote com.android.carrierdefaultap com.android.vending com.miui.vsimcore com.xiaomi.barrage;do
     if kill -9 $(pidof $shit);then
