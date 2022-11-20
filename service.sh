@@ -109,7 +109,5 @@ BATTERY_LOG(){
 sleep 120s
 #进行部分进程的kill和玄学优化
 FuckMIUI
-#开启火力压制
-FuckMIUI_DAEMON &
-#记录电流
-BATTERY_LOG &
+#开启火力压制&记录电流
+FuckMIUI_DAEMON|BATTERY_LOG
