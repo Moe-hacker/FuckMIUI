@@ -1,3 +1,5 @@
+#!/bin/sh
+#玄学优化没注释用途的部分来自网络，用途懒得添加了，反正也是玄学
 LOG_FILE=/data/adb/modules/FuckMIUI/FuckMIUI.log
 BATTERY_LOG_FILE=/data/adb/modules/FuckMIUI/Battery.log
 #玄学优化
@@ -65,7 +67,7 @@ FuckMIUI(){
     fi
   done
 }
-#电流日志
+#电流电量日志
 BATTERY_LOG(){
     rm $BATTERY_LOG_FILE
     while :
@@ -82,5 +84,5 @@ BATTERY_LOG(){
 sleep 120s
 #进行部分进程的kill和玄学优化
 FuckMIUI
-#开启记录电流，仅供作者本人参考
+#开启记录电流电量，作者本人监控用的，你要是用不到可以连着函数一起删了
 BATTERY_LOG
