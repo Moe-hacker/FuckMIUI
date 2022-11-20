@@ -11,7 +11,7 @@ FuckMIUI(){
   find /data/adb/modules/FuckMIUI|grep apk >> $LOG_FILE
   echo [$(date +%Y:%m:%d:%H:%M:%S)] Blocked hosts: >> $LOG_FILE
   cat /etc/hosts >> $LOG_FILE
-  #关闭ramdump
+  #关闭ramdump，这真不是玄学，ramdump的cpu异常占用真的会导致我的手机发烫，续航尿崩
   echo 0 > /sys/module/subsystem_restart/parameters/enable_ramdumps
   echo 0 > /sys/module/subsystem_restart/parameters/enable_mini_ramdumps
   #杀死部分可能在空文件挂载前就运行的进程，空文件已经存在故以下进程杀死后无法再次启动
