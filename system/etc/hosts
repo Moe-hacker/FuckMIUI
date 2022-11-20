@@ -2,12 +2,16 @@
 ::1 ip6-localhost
 #上面的是localhost定义，不要动
 #下面的这段是我写的，结合抓包和反编译结果，目的是夺回隐私
+#我写的里面很多域名并未发现具体数据活动，属于是虚空索敌
 #整天dns污染把我github解析到本地，尤其是raw文件下载最为严重，我把隐私相关地址也解析到本地不过分吧
+#软件安装验证相关，建议屏蔽，你懂的
 127.0.0.1 api.installer.xiaomi.com
 127.0.0.1 beacon-api.aliyuncs.com
 127.0.0.1 sdkconfig.ad.xiaomi.com
 127.0.0.1 api-middle.transfer.sec.miui.com
 127.0.0.1 api.sec.miui.com
+#手机管家相关，病毒数据库和联网查杀
+#不过安卓系统病毒并不算多，由于和隐私相关故做屏蔽
 127.0.0.1 miui-fxcse.avlyun.com
 127.0.0.1 adv.sec.miui.com
 127.0.0.1 tmfsdk.m.qq.com
@@ -18,65 +22,92 @@
 127.0.0.1 flash.sec.miui.com
 127.0.0.1 data.sec.miui.com
 127.0.0.1 auth.be.sec.miui.com
+#米推？我也不确定
 127.0.0.1 mpush-api.aliyun.com
+#貌似是小米账号安全相关
 127.0.0.1 api.miui.security.xiaomi.com
+#很明显，查找手机
 127.0.0.1 findapi.micloud.xiaomi.net
 127.0.0.1 lbs.map.qq.com
 127.0.0.1 find.api.micloud.xiaomi.net
+#鬼知道是啥
 127.0.0.1 cdn.exp.xiaomi.com
+#很明显，小米账号
 127.0.0.1 act.account.xiaomi.com
 127.0.0.1 account.xiaomi.com
+#软件商店
 127.0.0.1 app.market.xiaomi.com
 127.0.0.1 adash-emas.cn-hangzhou.aliyuncs.com
 127.0.0.1 sf0.market.xiaomi.com
 127.0.0.1 centertime.ksyun.com
 127.0.0.1 api.kingdata.ksyun.com
 127.0.0.1 file.market.xiaomi.com
+#鬼知道是啥
 127.0.0.1 slb-p2p.vcloud.ks-live.com
+#小米账号
 127.0.0.1 c.id.mi.com
 127.0.0.1 api.account.xiaomi.com
 127.0.0.1 open.account.xiaomi.com
 127.0.0.1 v.id.mi.com
 127.0.0.1 c.id.mi.com
+#不知道干嘛的
 127.0.0.1 httpdns-sc.aliyuncs.com
 127.0.0.1 h-adashx.ut.taobao.com
+#这应该是安装验证，建议屏蔽
 127.0.0.1 api-installer.pt.xiaomi.com
 127.0.0.1 preview-api.installer.xiaomi.com
 127.0.0.1 test-api-installer.pt.xiaomi.com
+#不知道干嘛的
 127.0.0.1 api.hybrid.intl.xiaomi.com
 127.0.0.1 api.hybrid.xiaomi.com
 127.0.0.1 sdkconfig.ad.intl.xiaomi.com
 127.0.0.1 sdkconfig.ad.xiaomi.com
+#还是不知道干嘛的
 127.0.0.1 data.game.xiaomi.com
+#小米妙播？这东西也不需要联网啊
 127.0.0.1 milink.ac.mi.com
 127.0.0.1 link.g.mi.com
 127.0.0.1 connect-milink.g.mi.com
+#安全相关
 127.0.0.1 tz.sec.xiaomi.com
+#应该是软件商店
 127.0.0.1 a0.app.xiaomi.com
+#应该是青少年模式
 127.0.0.1 child.sec.intl.miui.com
 127.0.0.1 child.sec.miui.com
+#不知道是啥，游戏安全？
 127.0.0.1 gamebox.sec.miui.com
+#安全相关
 127.0.0.1 api.miui.security.xiaomi.com
+#怕是广告
 127.0.0.1 api.ad.xiaomi.com
+#安全相关
 127.0.0.1 auth.be.sec.miui.com
 127.0.0.1 authbe.sec.intl.miui.com
 127.0.0.1 flash.sec.miui.com
 127.0.0.1 data.sec.intl.miui.com
 127.0.0.1 data.sec.miui.com
+#浏览器的敏感站点屏蔽数据？不清楚
 127.0.0.1 security.browser.miui.com
+#安全相关
 127.0.0.1 adv.sec.intl.miui.com
 127.0.0.1 adv.sec.miui.com
+#鬼知道啥东西
 127.0.0.1 api.jr.mi.com
+#安全相关
 127.0.0.1 embed.sec.miui.com
+#鬼知道啥东西？隐私保护需要联网那还叫隐私保护？简直是隐私破坏吧
 127.0.0.1 privacy.api.intl.miui.com
+#鬼知道是啥
 127.0.0.1 api.hybrid.intl.xiaomi.com
 127.0.0.1 apm-rum.inf.miui.com
+#软件商店
 127.0.0.1 app.market.xiaomi.com
 127.0.0.1 q-app.market.xiaomi.com
-#下面这段修改自酷安@诺蓝的MIUIYYDS，虽然和模块主题貌似不搭但是由于确实有效果就加进去了
-#为什么这里要添加出处呢？因为这是有效优化
+#下面这段修改自酷安@诺蓝的MIUIYYDS，虽然和模块主题貌似不搭但是由于应该确实有效果就加进去了
 #为什么要把地址由0.0.0.0改成127.0.0.1呢？不都是指向localhost吗？
 #问就是个人比较喜欢用127.0.0.1罢了
+#云控下发？不过云控已经用空文件淦没了，所以留着仅供观赏
 127.0.0.1 preview-jupiter.sys.miui.com
 127.0.0.1 jupiter.intl.sys.miui.com
 127.0.0.1 jupiter.sys.miui.com
@@ -92,6 +123,7 @@
 127.0.0.1 staging.sdkconfig.ad.xiaomi.srv
 127.0.0.1 staging.tracking.miui.com
 127.0.0.1 api.developer.xiaomi.com
+#MIUI广告屏蔽
 127.0.0.1 rom.pt.miui.srv
 127.0.0.1 advsec.miui.com
 127.0.0.1 analytics.miui.com
@@ -99,6 +131,7 @@
 127.0.0.1 api.joyose.miui.com
 127.0.0.1 adv.sec.miui.com
 127.0.0.1 gamebox.sec.miui.com
+#小米浏览器更新弹窗，但是直接换用chrome他不香吗？
 127.0.0.1 api.developer.xiaomi.com
 127.0.0.1 ota.miuipro.org
 127.0.0.1 ota.miuipro.ru
@@ -106,19 +139,22 @@
 127.0.0.1 www.miui.ms
 127.0.0.1 www.miuipro.info
 127.0.0.1 miuipro.info
+#百度网盘更新屏蔽，不过已经和本模块没啥关系了
 127.0.0.1 update.pan.baidu.com
 127.0.0.1 update.baidu.com
+#蓝奏广告屏蔽，效果待测
 127.0.0.1 sanme2.lanzoui.com
 127.0.0.1 glores2.lanzoui.com
 127.0.0.1 sanme2.lanzoux.com
 127.0.0.1 glores2.lanzoux.com
 127.0.0.1 lanzar.publicidadweb.com
+#小绿安广告屏蔽？应该是已经失效了
 127.0.0.1 ggx10.miguvideo.com
 127.0.0.1 ggx01.miguvideo.com
 127.0.0.1 ggx02.miguvideo.com
 127.0.0.1 ggic01.miguvideo.com
 127.0.0.1 ggtagcache.cmvideo.cn
-#解锁网易云会员歌曲灰色，效果待测试
+#解锁网易云会员灰曲，貌似也没啥用，毕竟我不是会员
 music.163.com 106.52.127.72:19951
 interface.music.163.com 106.52.127.72:19951
 interface3.music.163.com 106.52.127.72:19951
