@@ -1,5 +1,5 @@
 #!/bin/sh
-#玄学优化部分来自网络，反正也是玄学，东西太多懒得测试，具体有没有效果我也不知道，不过也没指望有效就是了
+#玄学优化来自网络，反正也是玄学，东西太多懒得测试，具体有没有效果我也不知道，不过也没指望有效就是了
 #部分常量定义为宏是个好习惯(c语言名词突然乱入)
 LOG_FILE=/data/adb/modules/FuckMIUI/FuckMIUI.log
 BATTERY_LOG_FILE=/data/adb/modules/FuckMIUI/Battery.log
@@ -134,7 +134,6 @@ FuckMIUI(){
   rm -rf /sdcard/.tbs
   rm -rf /sdcard/DCIM/.tmfs
   #尝试夺取隐私，虽然大概率没啥用
-  #TODO:尝试对sdcard挂载参数修改使chmod 000生效
   touch /sdcard/DCIM/.tmfs
   #杀死部分进程，后台压制对电流无任何帮助，因此杀一次求个安慰
   for shit in com.miui.securitycenter.remote com.miui.securitycenter com.miui.contentcatcher com.mobiletools.systemhelper:register com.android.htmlviewer:remote com.android.carrierdefaultap com.android.vending com.miui.vsimcore com.xiaomi.barrage;do
