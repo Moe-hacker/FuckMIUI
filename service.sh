@@ -31,6 +31,13 @@ FuckMIUI(){
   done
   #玄学优化
   service call SurfaceFlinger 1008 i32 1
+  #玄学优化
+  echo 1 > /dev/cpuset/sched_relax_domain_level
+  echo 1 > /dev/cpuset/system-background/sched_relax_domain_level
+  echo 1 > /dev/cpuset/background/sched_relax_domain_level
+  echo 1 > /dev/cpuset/foreground/sched_relax_domain_level
+  echo 1 > /dev/cpuset/top-app/sched_relax_domain_level
+  echo 0 > /proc/sys/vm/page-cluster
   #还是玄学优化
   for i in $(cat /data/adb/modules/FuckMIUI/nomerges.list);do
     echo 0 > $i
