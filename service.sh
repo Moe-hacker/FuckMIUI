@@ -57,6 +57,8 @@ FuckMIUI(){
   echo 0 > /sys/module/subsystem_restart/parameters/enable_mini_ramdumps
   echo 0 > /sys/block/mmcblk0/queue/nomerges
   echo 0 > /sys/block/mmcblk0rpmb/queue/nomerges
+  #求个心理安慰罢了，真创建socket马上就会被删，鬼知道为什么
+  ln /dev/null /dev/socket/logdw
 }
 #服务进程，会一直执行，对某些不能直接摧毁的进程进行火力压制
 FuckMIUI_DAEMON(){
