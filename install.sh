@@ -18,7 +18,7 @@ print_modname() {
  ui_print '愛にできることはまだあるよ，僕にできることはまだあるよ！'
  ui_print ''
  ui_print ''
- ui_print '都说了仅供观赏，听不懂猫话吗？等着卡米吧，哼！😤💢'
+ ui_print '都说了仅供观赏，听不懂猫话吗？喵喵喵？等着卡米吧，哼！💢'
  ui_print ''
  ui_print ''
  ui_print ''

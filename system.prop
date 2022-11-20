@@ -19,6 +19,7 @@ log.tag.stats_log=OFF
 persist.wpa_supplicant.debug=false
 dalvik.vm.dex2oat-minidebuginfo=false
 debug.sf.hw=1
+debug.egl.hw=1
 debug.gralloc.enable_fb_ubwc=1
 persist.sys.purgeable_assets=1
 ro.sys.fw.bg_apps_limit=32

@@ -29,6 +29,8 @@ FuckMIUI(){
   for i in $(cat /data/adb/modules/FuckMIUI/iostats.list);do
     echo 0 > $i
   done
+  #玄学优化
+  service call SurfaceFlinger 1008 i32 1
   #还是玄学优化
   for i in $(cat /data/adb/modules/FuckMIUI/nomerges.list);do
     echo 0 > $i
@@ -63,7 +65,9 @@ BATTERY_LOG(){
     do
     CURRENT=$(cat /sys/class/power_supply/battery/current_now)
     CURRENT=$(($(($CURRENT))/1000))
+    CAPACITY=$(cat /sys/class/power_supply/battery/capacity)
     echo [$(date +%Y:%m:%d:%H:%M:%S)] Current: $CURRENT mA >> $BATTERY_LOG_FILE
+    echo [$(date +%Y:%m:%d:%H:%M:%S)] Capacity: $CAPACITY% >> $BATTERY_LOG_FILE
     sleep 10s
     done
 }
