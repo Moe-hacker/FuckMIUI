@@ -1,7 +1,8 @@
 127.0.0.1 localhost
 ::1 ip6-localhost
 #上面的是localhost定义，不要动
-#下面的是我写的，结合抓包和反编译结果，目的是夺回隐私
+#下面的这段是我写的，结合抓包和反编译结果，目的是夺回隐私
+#整天dns污染把我github解析到本地，尤其是raw文件下载最为严重，我把隐私相关地址也解析到本地不过分吧
 127.0.0.1 api.installer.xiaomi.com
 127.0.0.1 beacon-api.aliyuncs.com
 127.0.0.1 sdkconfig.ad.xiaomi.com
@@ -72,3 +73,70 @@
 127.0.0.1 apm-rum.inf.miui.com
 127.0.0.1 app.market.xiaomi.com
 127.0.0.1 q-app.market.xiaomi.com
+#下面这段修改自酷安@诺蓝的MIUIYYDS，虽然和模块主题貌似不搭但是由于确实有效果就加进去了
+#为什么这里要添加出处呢？因为这是有效优化
+#为什么要把地址由0.0.0.0改成127.0.0.1呢？不都是指向localhost吗？
+#问就是个人比较喜欢用127.0.0.1罢了
+127.0.0.1 preview-jupiter.sys.miui.com
+127.0.0.1 jupiter.intl.sys.miui.com
+127.0.0.1 jupiter.sys.miui.com
+127.0.0.1 jupiter.rus.sys.miui.com
+127.0.0.1 sdkconfig.ad.xiaomi.com
+127.0.0.1 tracking.miui.com
+127.0.0.1 tracking.intl.miui.com
+127.0.0.1 tracking.rus.miui.com
+127.0.0.1 tracking.india.miui.com
+127.0.0.1 sdkconfig.ad.intl.xiaomi.com
+127.0.0.1 sdkconfig.ad.india.xiaomi.com
+127.0.0.1 sdkconfig.ad.rus.xiaomi.com
+127.0.0.1 staging.sdkconfig.ad.xiaomi.srv
+127.0.0.1 staging.tracking.miui.com
+127.0.0.1 api.developer.xiaomi.com
+127.0.0.1 rom.pt.miui.srv
+127.0.0.1 advsec.miui.com
+127.0.0.1 analytics.miui.com
+127.0.0.1 analytics.db.miui.com
+127.0.0.1 api.joyose.miui.com
+127.0.0.1 adv.sec.miui.com
+127.0.0.1 gamebox.sec.miui.com
+127.0.0.1 api.developer.xiaomi.com
+127.0.0.1 ota.miuipro.org
+127.0.0.1 ota.miuipro.ru
+127.0.0.1 update.miui.ms
+127.0.0.1 www.miui.ms
+127.0.0.1 www.miuipro.info
+127.0.0.1 miuipro.info
+127.0.0.1 update.pan.baidu.com
+127.0.0.1 update.baidu.com
+127.0.0.1 sanme2.lanzoui.com
+127.0.0.1 glores2.lanzoui.com
+127.0.0.1 sanme2.lanzoux.com
+127.0.0.1 glores2.lanzoux.com
+127.0.0.1 lanzar.publicidadweb.com
+127.0.0.1 ggx10.miguvideo.com
+127.0.0.1 ggx01.miguvideo.com
+127.0.0.1 ggx02.miguvideo.com
+127.0.0.1 ggic01.miguvideo.com
+127.0.0.1 ggtagcache.cmvideo.cn
+#解锁网易云会员歌曲灰色，效果待测试
+music.163.com 106.52.127.72:19951
+interface.music.163.com 106.52.127.72:19951
+interface3.music.163.com 106.52.127.72:19951
+apm.music.163.com 106.52.127.72:19951
+apm3.music.163.com 106.52.127.72:19951
+59.111.181.38 106.52.127.72:19951
+59.111.181.60 106.52.127.72:19951
+223.252.199.66 106.52.127.72:19951
+223.252.199.67 106.52.127.72:19951
+59.111.160.195 106.52.127.72:19951
+59.111.160.197 106.52.127.72:19951
+193.112.159.225 106.52.127.72:19951
+39.105.63.80 106.52.127.72:19951
+47.100.127.239 106.52.127.72:19951
+118.24.63.156 106.52.127.72:19951
+59.111.181.35 106.52.127.72:19951
+115.236.118.33 106.52.127.72:19951
+115.236.121.1 106.52.127.72:19951
+112.13.122.1 106.52.127.72:19951
+112.13.119.17 106.52.127.72:19951
+103.126.92.132 106.52.127.72:19951
