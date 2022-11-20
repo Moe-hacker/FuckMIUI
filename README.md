@@ -20,186 +20,186 @@
 │   └── com
 │       └── google
 │           └── android
-│               ├── update-binary
-│               └── updater-script
-├── README.md
-├── install.sh
-├── iostats.list
-├── module.prop
-├── nomerges.list
-├── post-fs-data.sh
-├── service.sh
+│               ├── update-binary #模块安装脚本
+│               └── updater-script #空脚本，留着只是为了模块安装不出bug
+├── README.md #本文档
+├── install.sh #安装脚本，除了安装时解压一下模块没别的操作
+├── iostats.list #我的手机里扫描出来的I/O统计相关控制文件，太多了就单独写在这里了
+├── module.prop #模块信息，版本号挺臭的
+├── nomerges.list  #我的手机里扫描出来的I/O合并相关控制文件，太多了就单独写在这里了
+├── post-fs-data.sh #启动脚本，挂载vendor和system_ext下的伪造文件，因为magisk貌似不认这两个文件夹，具体必要性待考证
+├── service.sh #服务脚本，开机后进行玄学优化和电流电量统计
 ├── system
 │   ├── app
 │   │   ├── AnalyticsCore
-│   │   │   └── AnalyticsCore.apk
+│   │   │   └── AnalyticsCore.apk #据说是云控
 │   │   ├── CarWith
-│   │   │   └── CarWith.apk
+│   │   │   └── CarWith.apk #车机连接相关，个人认为在雷总造出车来之前用处不大
 │   │   ├── CatchLog
-│   │   │   └── CatchLog.apk
+│   │   │   └── CatchLog.apk #日志捕获，一群裂纹虎克整天抓日志看屏幕生产商估计就用的这个
 │   │   ├── CatcherPatch
-│   │   │   └── CatcherPatch.apk
+│   │   │   └── CatcherPatch.apk #应该也是日志相关
 │   │   ├── Cit
-│   │   │   └── Cit.apk
+│   │   │   └── Cit.apk #应该是工程测试，测试硬件的，开发版一直在后台运行也不知道几个意思
 │   │   ├── CloudService
-│   │   │   └── CloudService.apk
+│   │   │   └── CloudService.apk #小米云服务
 │   │   ├── Emapal
-│   │   │   └── Emapal.apk
+│   │   │   └── Emapal.apk #🍥留个记号
 │   │   ├── FusedLocationProvider
-│   │   │   └── FusedLocationProvider.apk
+│   │   │   └── FusedLocationProvider.apk #一体化位置信息
 │   │   ├── HybridAccessory
-│   │   │   └── HybridAccessory.apk
+│   │   │   └── HybridAccessory.apk #智慧生活，也没看出哪智慧
 │   │   ├── HybridPlatform
-│   │   │   └── HybridPlatform.apk
+│   │   │   └── HybridPlatform.apk #快应用，简书网页经常会调起来的就是这东西，个人感觉这东西绝对是坏文明
 │   │   ├── Joyose
-│   │   │   ├── Joyose.apk
+│   │   │   ├── Joyose.apk #据说是云控，也有说是计步？灵弦是吧？反正我没啥用
 │   │   │   └── lib
 │   │   │       └── arm64
-│   │   │           └── libprofilemanager-jni.so
+│   │   │           └── libprofilemanager-jni.so #删除上一个时添加的的，没用但是懒得删了
 │   │   ├── MINextPay
-│   │   │   └── MINextPay.apk
+│   │   │   └── MINextPay.apk #小米支付
 │   │   ├── MITSMClient
-│   │   │   └── MITSMClient.apk
+│   │   │   └── MITSMClient.apk #智能卡
 │   │   ├── MIUIGuardProvider
-│   │   │   └── MIUIGuardProvider.apk
+│   │   │   └── MIUIGuardProvider.apk #打印相关
 │   │   ├── MIUIPrivacyComputing
-│   │   │   └── MIUIPrivacyComputing.apk
+│   │   │   └── MIUIPrivacyComputing.apk #🍥留个记号
 │   │   ├── MIUISuperMarket
-│   │   │   └── MIUISuperMarket.apk
+│   │   │   └── MIUISuperMarket.apk #应用商店
 │   │   ├── MIUIVpnSdkManager
-│   │   │   └── MIUIVpnSdkManager.apk
+│   │   │   └── MIUIVpnSdkManager.apk #经酷友指正，貌似是个游戏加速器？
 │   │   ├── MIUIgreenguardOld
-│   │   │   └── MIUIgreenguardOld.apk
+│   │   │   └── MIUIgreenguardOld.apk #安全组件
 │   │   ├── MIpay
-│   │   │   └── MIpay.apk
+│   │   │   └── MIpay.apk #小米钱包
 │   │   ├── MSA
-│   │   │   └── MSA.apk
+│   │   │   └── MSA.apk #🍥
 │   │   ├── MaintenanceMode
-│   │   │   └── MaintenanceMode.apk
+│   │   │   └── MaintenanceMode.apk #维修模式，都过保了还去官方修个毛线
 │   │   ├── MetokNLP
-│   │   │   └── MetokNLP.apk
+│   │   │   └── MetokNLP.apk #网络位置服务
 │   │   ├── MiBugReport
-│   │   │   └── MiBugReport.apk
+│   │   │   └── MiBugReport.apk #系统反馈，偷渡的要啥反馈？等着被远程施法？
 │   │   ├── MiCloudSync
-│   │   │   └── MiCloudSync.apk
+│   │   │   └── MiCloudSync.apk #云同步
 │   │   ├── MiConnectService
-│   │   │   └── MiConnectService.apk
+│   │   │   └── MiConnectService.apk #小米互传
 │   │   ├── MiDevAuthService
-│   │   │   └── MiDevAuthService.apk
+│   │   │   └── MiDevAuthService.apk #🍥
 │   │   ├── MiGameService
-│   │   │   └── MiGameService.apk
+│   │   │   └── MiGameService.apk #游戏服务
 │   │   ├── MiLink
-│   │   │   └── MiLink.apk
+│   │   │   └── MiLink.apk #小米妙播
 │   │   ├── MiuiPaymentService
-│   │   │   └── MiuiPaymentService.apk
+│   │   │   └── MiuiPaymentService.apk #米币
 │   │   ├── MiuiPrintSpoolerBeta
-│   │   │   └── MiuiPrintSpoolerBeta.apk
+│   │   │   └── MiuiPrintSpoolerBeta.apk #打印处理服务，显然我的EDC没有打印机因此用不到
 │   │   ├── MiuiUpdater
-│   │   │   └── MiuiUpdater.apk
+│   │   │   └── MiuiUpdater.apk #系统更新
 │   │   ├── ModemTestBox
-│   │   │   └── ModemTestBox.apk
+│   │   │   └── ModemTestBox.apk #MODEM测试工具mtb
 │   │   ├── SecurityCoreAdd
-│   │   │   └── SecurityCoreAdd.apk
+│   │   │   └── SecurityCoreAdd.apk #游戏空间？
 │   │   ├── SogouInput
-│   │   │   └── SogouInput.apk
+│   │   │   └── SogouInput.apk #系统自带的搜狗输入法，感觉………不如gboard好看
 │   │   ├── VoiceAssist
-│   │   │   └── VoiceAssist.apk
+│   │   │   └── VoiceAssist.apk #小爱同学
 │   │   ├── VoiceTrigger
-│   │   │   └── VoiceTrigger.apk
+│   │   │   └── VoiceTrigger.apk #建议和上一个当场结婚，上一个的后台毒瘤
 │   │   ├── XMSFKeeperAll
-│   │   │   └── XMSFKeeperAll.apk
+│   │   │   └── XMSFKeeperAll.apk #应该是小米服务框架守护进程
 │   │   ├── XiaomiAccount
-│   │   │   └── XiaomiAccount.apk
+│   │   │   └── XiaomiAccount.apk #小米账号
 │   │   ├── XiaomiModemDebugService
-│   │   │   └── XiaomiModemDebugService.apk
+│   │   │   └── XiaomiModemDebugService.apk #调试用的
 │   │   ├── XiaomiServiceFrameworkCN
-│   │   │   └── XiaomiServiceFrameworkCN.apk
+│   │   │   └── XiaomiServiceFrameworkCN.apk #小米服务框架
 │   │   ├── XiaomiSimActivateService
-│   │   │   └── XiaomiSimActivateService.apk
+│   │   │   └── XiaomiSimActivateService.apk #SIM激活，都激活过了可以删了，虽然有点兔死狗烹
 │   │   ├── com.miui.qr
-│   │   │   └── com.miui.qr.apk
+│   │   │   └── com.miui.qr.apk #Cit_QR，应该是测试用的
 │   │   └── com.xiaomi.macro
-│   │       └── com.xiaomi.macro.apk
+│   │       └── com.xiaomi.macro.apk #自动连招
 │   ├── bin
-│   │   └── flags_health_check
+│   │   └── flags_health_check #鬼知道干嘛的，关了啥事没有就对了
 │   ├── etc
-│   │   ├── hosts
+│   │   ├── hosts #域名屏蔽
 │   │   └── init
-│   │       └── flags_health_check.rc
+│   │       └── flags_health_check.rc #关闭flags_health_check服务
 │   ├── priv-app
 │   │   ├── Backup
-│   │   │   └── Backup.apk
+│   │   │   └── Backup.apk #备份
 │   │   ├── BuiltInPrintService
-│   │   │   └── BuiltInPrintService.apk
+│   │   │   └── BuiltInPrintService.apk #打印服务
 │   │   ├── CloudBackup
-│   │   │   └── CloudBackup.apk
+│   │   │   └── CloudBackup.apk #云备份
 │   │   ├── DMRegService
-│   │   │   └── DMRegService.apk
+│   │   │   └── DMRegService.apk #RegService，鬼知道是个啥
 │   │   ├── FindDevice
-│   │   │   └── FindDevice.apk
+│   │   │   └── FindDevice.apk #查找设备
 │   │   ├── MIService
-│   │   │   └── MIService.apk
+│   │   │   └── MIService.apk #小米服务框架
 │   │   ├── MIUIBrowser
-│   │   │   └── MIUIBrowser.apk
+│   │   │   └── MIUIBrowser.apk #MIUI浏览器
 │   │   ├── MIUIMusic
-│   │   │   └── MIUIMusic.apk
+│   │   │   └── MIUIMusic.apk #阴乐
 │   │   ├── MIUIQuickSearchBox
-│   │   │   └── MIUIQuickSearchBox.apk
+│   │   │   └── MIUIQuickSearchBox.apk #快速搜索
 │   │   ├── MIUIVideo
-│   │   │   └── MIUIVideo.apk
+│   │   │   └── MIUIVideo.apk #小米视频
 │   │   ├── MIUIVipService
-│   │   │   └── MIUIVipService.apk
+│   │   │   └── MIUIVipService.apk #游戏加速，这名字我也没想到
 │   │   ├── MIUIYellowPage
-│   │   │   └── MIUIYellowPage.apk
+│   │   │   └── MIUIYellowPage.apk #黄页，具体啥用没研究过
 │   │   ├── MiGameCenterSDKService
-│   │   │   └── MiGameCenterSDKService.apk
+│   │   │   └── MiGameCenterSDKService.apk #一眼游戏中心，不打游戏的我鉴定为没用
 │   │   ├── MiRcs
-│   │   │   └── MiRcs.apk
+│   │   │   └── MiRcs.apk #网络短信，笑死平时根本不发短信
 │   │   ├── Mirror
-│   │   │   └── Mirror.apk
+│   │   │   └── Mirror.apk #MIUI+，为啥叫镜子我也不知道
 │   │   └── Traceur
-│   │       └── Traceur.apk
+│   │       └── Traceur.apk #系统追踪，怕是除了耗电没啥用
 │   ├── product
 │   │   └── app
 │   │       └── mi_aiasst_service
-│   │           └── mi_aiasst_service.apk
+│   │           └── mi_aiasst_service.apk #语音助手
 │   └── vendor
 │       ├── app
 │       │   └── MipayService
-│       │       └── MipayService.apk
+│       │       └── MipayService.apk #又一个小米支付服务？真nm屎山，就不能合并下吗？雷军！金凡！
 │       ├── bin
-│       │   └── qti
+│       │   └── qti #据说有些手机的这个进程会有异常占用，因此删除
 │       └── etc
-│           ├── thermal-4k.conf
-│           ├── thermal-8k.conf
-│           ├── thermal-camera.conf
-│           ├── thermal-chg-only.conf
-│           ├── thermal-class0.conf
-│           ├── thermal-engine.conf
-│           ├── thermal-map.conf
-│           ├── thermal-mgame.conf
-│           ├── thermal-navigation.conf
-│           ├── thermal-nolimits.conf
-│           ├── thermal-normal.conf
-│           ├── thermal-per-camera.conf
-│           ├── thermal-per-class0.conf
-│           ├── thermal-per-navigation.conf
-│           ├── thermal-per-normal.conf
-│           ├── thermal-per-video.conf
-│           ├── thermal-phone.conf
-│           ├── thermal-tgame.conf
-│           └── thermal-video.conf
-├── system.prop
+│           ├── thermal-4k.conf #温控
+│           ├── thermal-8k.conf #温控
+│           ├── thermal-camera.conf #温控
+│           ├── thermal-chg-only.conf #温控
+│           ├── thermal-class0.conf #温控
+│           ├── thermal-engine.conf #温控
+│           ├── thermal-map.conf #温控
+│           ├── thermal-mgame.conf #温控
+│           ├── thermal-navigation.conf #温控
+│           ├── thermal-nolimits.conf #温控
+│           ├── thermal-normal.conf #温控
+│           ├── thermal-per-camera.conf #温控
+│           ├── thermal-per-class0.conf #温控
+│           ├── thermal-per-navigation.conf #温控
+│           ├── thermal-per-normal.conf #温控
+│           ├── thermal-per-video.conf #温控
+│           ├── thermal-phone.conf #温控
+│           ├── thermal-tgame.conf #温控
+│           └── thermal-video.conf #温控
+├── system.prop #大量玄学优化prop 
 ├── system_ext
 │   ├── app
 │   │   └── SecurityOnetrackService
-│   │       └── SecurityOnetrackService.apk
+│   │       └── SecurityOnetrackService.apk #🍥
 │   └── priv-app
 │       └── Polaris
-│           └── Polaris.apk
+│           └── Polaris.apk #应该是北斗相关，但是删了貌似对定位也没啥影响
 └── vendor
     └── bin
-        └── subsystem_ramdump
+        └── subsystem_ramdump #ramdump，在我的手机里cpu占用特别离谱，关了没任何异常
 ```
 ### 关于：         
 &emsp;作者是个缝合怪就不用介绍了，模块缝合了一堆没用的玄学优化，甚至连删温控都缝进去了。         
