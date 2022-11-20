@@ -9,11 +9,11 @@
 &emsp;hosts部分感谢酷安@诺蓝的MIUIYYDS。           
 &emsp;大部分薛定谔的优化真实来源无从考证，因此没有标注出处。          
 &emsp;如果你是大佬，直接git克隆本仓库压缩下就能刷，但是，卡米啥的别怪我😣。           
-&emsp;如果你闲着没事分析这里面的代码，你会发现注释非常有趣，大部分地方简直写了跟没写一个样。         
+&emsp;如果你闲着没事分析这里面的代码，你会发现注释非常有趣，事实上我更适合去做单口相声。         
 &emsp;本模块遵循屎山代码的母语注释注释原则和不测试原则。        
 &emsp;如果有建议或者优化方案，欢迎提交pr/issue。              
 &emsp;本打算用MIT协议的，但由于加入了非原创内容，因此仓库已删除许可证，因为许可证是给原创或作者允许二创的东西准备的，但是大部分玄学优化来源根本无从考证，因此本仓库「不做版权限制」。            
-## 项目结构附文件功能注释(待完善)：        
+## 项目结构附文件功能注释，建议电脑查看：        
 ```text
 .
 ├── META-INF
@@ -44,7 +44,7 @@
 │   │   ├── CloudService
 │   │   │   └── CloudService.apk #小米云服务
 │   │   ├── Emapal
-│   │   │   └── Emapal.apk #🍥留个记号
+│   │   │   └── Emapal.apk #GamePal，不知道是啥
 │   │   ├── FusedLocationProvider
 │   │   │   └── FusedLocationProvider.apk #一体化位置信息
 │   │   ├── HybridAccessory
@@ -63,7 +63,7 @@
 │   │   ├── MIUIGuardProvider
 │   │   │   └── MIUIGuardProvider.apk #打印相关
 │   │   ├── MIUIPrivacyComputing
-│   │   │   └── MIUIPrivacyComputing.apk #🍥留个记号
+│   │   │   └── MIUIPrivacyComputing.apk #不知道干啥的
 │   │   ├── MIUISuperMarket
 │   │   │   └── MIUISuperMarket.apk #应用商店
 │   │   ├── MIUIVpnSdkManager
@@ -73,7 +73,7 @@
 │   │   ├── MIpay
 │   │   │   └── MIpay.apk #小米钱包
 │   │   ├── MSA
-│   │   │   └── MSA.apk #🍥
+│   │   │   └── MSA.apk #智能服务，也没看出那里智能，估计命名和隔壁华子一个德行
 │   │   ├── MaintenanceMode
 │   │   │   └── MaintenanceMode.apk #维修模式，都过保了还去官方修个毛线
 │   │   ├── MetokNLP
@@ -85,7 +85,7 @@
 │   │   ├── MiConnectService
 │   │   │   └── MiConnectService.apk #小米互传
 │   │   ├── MiDevAuthService
-│   │   │   └── MiDevAuthService.apk #🍥
+│   │   │   └── MiDevAuthService.apk #可能是开发版授权
 │   │   ├── MiGameService
 │   │   │   └── MiGameService.apk #游戏服务
 │   │   ├── MiLink
@@ -193,7 +193,7 @@
 ├── system_ext
 │   ├── app
 │   │   └── SecurityOnetrackService
-│   │       └── SecurityOnetrackService.apk #🍥
+│   │       └── SecurityOnetrackService.apk #不知道是个啥
 │   └── priv-app
 │       └── Polaris
 │           └── Polaris.apk #应该是北斗相关，但是删了貌似对定位也没啥影响
