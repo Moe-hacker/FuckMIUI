@@ -1,5 +1,7 @@
 127.0.0.1 localhost
 ::1 ip6-localhost
+#上面的是localhost定义，不要动
+#下面的是我写的，结合抓包和反编译结果，目的是夺回隐私
 127.0.0.1 api.installer.xiaomi.com
 127.0.0.1 beacon-api.aliyuncs.com
 127.0.0.1 sdkconfig.ad.xiaomi.com
