@@ -82,6 +82,7 @@ debug.sqlite.wal.syncmode=OFF
 debug.sqlite.journalmode=OFF
 persist.hvdcp.allow_opti=1
 persist.vendor.usb.hvdcp.detect=true
+debug.cpurend.vsync=false
 #音质增强，实际上是负优化，或者10U本身并不需要优化
 #开了以后感觉听鹿乃唱歌变味儿了，所以删了
 #以上结论我戴耳机测的，并且我是木耳，所以有多艹自己体会
