@@ -4,7 +4,6 @@ LATESTARTSERVICE=false
 POSTFSDATA=false
 PROPFILE=false
 print_modname() {
- ui_print '非作者本人严禁直接打包刷入！'
  exit 1
  ui_print ''
  ui_print ''
