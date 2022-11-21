@@ -22,6 +22,18 @@
 - 观赏性质，个人感觉注释和文档写的并不枯燥        
 - 可以用来养蛊(雾)          
 - 可以看作者乐子，虽然这并不道德(大雾)        
+## 关于logd:            
+&emsp;苦逼的作者在debug时发现surfaceflinger和system_server两大进程均检测到logdw套接字调用，如果直接屏蔽logd的话strace中会有相关报错日志，且lsp会严重炸日志，lspd也会疯狂调用日志系统，虽然并不占用cpu，但它会往日志文件里拉屎，因此如果你的手机logd占用并不离谱，不建议关闭。          
+&emsp;本模块已经移除logd直接关闭功能，因为实测对于作者本人的手机没有任何帮助，因此改为试图减少日志量，如有需要，请手动在模块根目录创建以下文件，内容随意，不是rm -rf /*啥的就行：         
+```text
+./system/bin/logd
+./system/etc/init/logd.rc
+```
+然后在service.sh中的FuckMIUI函数中写入：         
+```sh
+killall -9 logd
+```
+#       
 ## 项目结构附文件功能注释，建议电脑查看：        
 ```text
 .
