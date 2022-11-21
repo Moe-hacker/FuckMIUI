@@ -108,10 +108,7 @@
 │   │   ├── HybridPlatform
 │   │   │   └── HybridPlatform.apk #快应用，简书网页经常会调起来的就是这东西，个人感觉这东西绝对是坏文明
 │   │   ├── Joyose
-│   │   │   ├── Joyose.apk #据说是云控，也有说是计步？灵弦是吧？反正我没啥用
-│   │   │   └── lib
-│   │   │       └── arm64
-│   │   │           └── libprofilemanager-jni.so #删除上一个时添加的的，没用但是懒得删了
+│   │   │   └── Joyose.apk #据说是云控，也有说是计步？灵弦是吧？反正我没啥用
 │   │   ├── MINextPay
 │   │   │   └── MINextPay.apk #小米支付
 │   │   ├── MITSMClient
@@ -224,6 +221,7 @@
 │       │   └── MipayService
 │       │       └── MipayService.apk #又一个小米支付服务？真nm屎山，就不能合并下吗？雷军！金凡！
 │       ├── bin
+│       │   ├── mi_thermald #MIUI温控
 │       │   └── qti #据说有些手机的这个进程会有异常占用，因此删除
 │       └── etc
 │           ├── thermal-4k.conf #温控
