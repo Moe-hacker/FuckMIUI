@@ -32,7 +32,6 @@
 - 关闭ramdump    
 - 关闭qti       
 - 移除温控      
-#TODO:完全移除温控进程        
 - 关闭flags_health_check       
 - 对部分进程开机后执行kill        
 - 开机清理部分应用拉的屎       
