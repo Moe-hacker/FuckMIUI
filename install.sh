@@ -4,7 +4,6 @@ LATESTARTSERVICE=false
 POSTFSDATA=false
 PROPFILE=false
 print_modname() {
- exit 1
  ui_print ''
  ui_print ''
  ui_print ''
@@ -19,19 +18,11 @@ print_modname() {
  ui_print ''
  ui_print '愛にできることはまだあるよ，僕にできることはまだあるよ！'
  ui_print ''
- ui_print 'MIUI:'
- ui_print '      　 　 ▃▆█▇▄▖'
- ui_print '　 　 　 ▟◤▖　　　◥█▎'
- ui_print '  　 ◢◤　 ▐　　　 　▐▉'
- ui_print '　 ▗◤　　　▂　▗▖　　▕█▎'
- ui_print '　◤　▗▅▖◥▄　▀◣　　█▊'
- ui_print '▐　▕▎◥▖◣◤　　　　◢██'
- ui_print '█◣　◥▅█▀　　　　▐██◤'
- ui_print '█▙▂　　     　◢██◤'
- ui_print '◥██◣　　　　◢▄◤'
- ui_print ' 　　▀██▅▇▀'
  ui_print ''
  ui_print ''
+ ui_print ''
+ ui_print ''
+ exit 1
 }
 on_install() {
  unzip -o "$ZIPFILE" -d $MODPATH 2>&1 > /dev/null
