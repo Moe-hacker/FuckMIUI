@@ -4,6 +4,8 @@ LATESTARTSERVICE=false
 POSTFSDATA=false
 PROPFILE=false
 print_modname() {
+ ui_print '非作者本人严禁直接打包刷入！'
+ exit 1
  ui_print ''
  ui_print ''
  ui_print ''
@@ -17,9 +19,6 @@ print_modname() {
  ui_print '#      "mmmm"  "mmm" #   "m #    # mm#mm  "mmmm" mm#mm'
  ui_print ''
  ui_print '愛にできることはまだあるよ，僕にできることはまだあるよ！'
- ui_print ''
- ui_print ''
- ui_print '都说了仅供观赏，听不懂猫话吗？喵喵喵？等着卡米吧，哼！💢'
  ui_print ''
  ui_print 'MIUI:'
  ui_print '      　 　 ▃▆█▇▄▖'
