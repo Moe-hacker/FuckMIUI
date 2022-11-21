@@ -1,26 +1,15 @@
 #!/bin/sh
 #玄学优化来自网络，反正也是玄学，东西太多懒得测试，具体有没有效果我也不知道，不过也没指望有效就是了
-#部分常量定义为宏是个好习惯(c语言名词突然乱入)
-LOG_FILE=/data/adb/modules/FuckMIUI/FuckMIUI.log
+#常量定义为宏是个好习惯(c语言名词突然乱入)
 BATTERY_LOG_FILE=/data/adb/modules/FuckMIUI/Battery.log
 #玄学优化，非得专门写个函数真没啥必要，只是习惯罢了
 FuckMIUI(){
-  #清空日志开始新的记录
-  echo [$(date +%Y:%m:%d:%H:%M:%S)] Start logging > $LOG_FILE
-  echo [$(date +%Y:%m:%d:%H:%M:%S)] Destoryed apks: >> $LOG_FILE
-  find /data/adb/modules/FuckMIUI|grep apk >> $LOG_FILE
-  echo [$(date +%Y:%m:%d:%H:%M:%S)] Blocked hosts: >> $LOG_FILE
-  cat /etc/hosts >> $LOG_FILE
   #关闭ramdump，这真不是玄学，ramdump的cpu异常占用真的会导致我的手机发烫，续航尿崩
   echo 0 > /sys/module/subsystem_restart/parameters/enable_ramdumps
   echo 0 > /sys/module/subsystem_restart/parameters/enable_mini_ramdumps
   #杀死部分可能在空文件挂载前就运行的进程，空文件已经存在故以下进程杀死后无法再次启动
   for shit in mi_thermald android.hardware.thermal@2.0-service.qti flags_health_check subsystem_ramdump qti;do
-  if kill -9 $(pidof $shit);then
-    echo [$(date +%Y:%m:%d:%H:%M:%S)] Successfully killed $shit >> $LOG_FILE
-  else
-    echo [$(date +%Y:%m:%d:%H:%M:%S)] Failed to kill $shit: no process found >> $LOG_FILE
-  fi
+   kill -9 $(pidof $shit)
   done
   #这东西貌似不是玄学，由于模块可能会导致系统产生崩溃弹窗，尝试屏蔽
   settings put global hide_error_dialogs 1
@@ -135,13 +124,43 @@ FuckMIUI(){
   rm -rf /sdcard/DCIM/.tmfs
   #尝试夺取隐私，虽然大概率没啥用
   touch /sdcard/DCIM/.tmfs
+  #来自MIUIYYDS，禁用部分服务
+  pm disable "com.miui.systemAdSolution"
+  pm disable "com.xiaomi.joyose/.smartop.gamebooster.receiver.BoostRequestReceiver"
+  pm disable "com.xiaomi.joyose/.smartop.SmartOpService"
+  pm disable "com.xiaomi.joyose.sysbase.MetokClService"
+  pm disable "com.miui.powerkeeper/com.miui.powerkeeper.cloudcontrol.CloudUpdateReceiver"
+  pm disable "com.miui.powerkeeper/com.miui.powerkeeper.cloudcontrol.CloudUpdateJobService"
+  pm disable "com.miui.powerkeeper/com.miui.powerkeeper.ui.CloudInfoActivity"
+  pm disable "com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService"
+  pm disable "com.miui.daemon/.performance.statistics.services.GraphicDumpService"
+  pm disable "com.miui.daemon/.performance.statistics.services.AtraceDumpService"
+  pm disable "com.miui.daemon/.performance.SysoptService"
+  pm disable "com.miui.daemon/.performance.MiuiPerfService"
+  pm disable "com.miui.daemon/.performance.server.ExecutorService"
+  pm disable "com.miui.daemon/.mqsas.jobs.EventUploadService"
+  pm disable "com.miui.daemon/.mqsas.jobs.FileUploadService"
+  pm disable "com.miui.daemon/.mqsas.jobs.HeartBeatUploadService"
+  pm disable "com.miui.daemon/.mqsas.providers.MQSProvider"
+  pm disable "com.miui.daemon/.performance.provider.PerfTurboProvider"
+  pm disable "com.miui.daemon/.performance.system.am.SysoptjobService"
+  pm disable "com.miui.daemon/.performance.system.am.MemCompactService"
+  pm disable "com.miui.daemon/.performance.statistics.services.FreeFragDumpService"
+  pm disable "com.miui.daemon/.performance.statistics.services.DefragService"
+  pm disable "com.miui.daemon/.performance.statistics.services.MeminfoService"
+  pm disable "com.miui.daemon/.performance.statistics.services.IonService"
+  pm disable "com.miui.daemon/.performance.statistics.services.GcBoosterService"
+  pm disable "com.miui.daemon/.mqsas.OmniTestReceiver"
+  pm disable "com.miui.daemon/.performance.MiuiPerfService"
+  pm disable "com.tencent.mm:support"
+  pm disable "com.tencent.mm:recovery"
+  # Disable collective Device administrators
+  pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver
+  pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver
+  pm disable com.google.android.gms/.chimera.GmsIntentOperationService
   #杀死部分进程，后台压制对电流无任何帮助，因此杀一次求个安慰
   for shit in com.miui.securitycenter.remote com.miui.securitycenter com.miui.contentcatcher com.mobiletools.systemhelper:register com.android.htmlviewer:remote com.android.carrierdefaultap com.android.vending com.miui.vsimcore com.xiaomi.barrage;do
-    if kill -9 $(pidof $shit);then
-      echo [$(date +%Y:%m:%d:%H:%M:%S)] Successfully killed $shit >> $LOG_FILE
-    else
-      echo [$(date +%Y:%m:%d:%H:%M:%S)] Failed to kill $shit: no process found >> $LOG_FILE
-    fi
+    kill -9 $(pidof $shit)
   done
 }
 #电流电量日志，自动记录，就不用老盯着scene看了
