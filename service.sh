@@ -15,7 +15,7 @@ FuckMIUI(){
   echo 0 > /sys/module/subsystem_restart/parameters/enable_ramdumps
   echo 0 > /sys/module/subsystem_restart/parameters/enable_mini_ramdumps
   #杀死部分可能在空文件挂载前就运行的进程，空文件已经存在故以下进程杀死后无法再次启动
-  for shit in flags_health_check subsystem_ramdump qti;do
+  for shit in mi_thermald android.hardware.thermal@2.0-service.qti flags_health_check subsystem_ramdump qti;do
   if kill -9 $(pidof $shit);then
     echo [$(date +%Y:%m:%d:%H:%M:%S)] Successfully killed $shit >> $LOG_FILE
   else
