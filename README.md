@@ -257,7 +257,7 @@
         └── subsystem_ramdump #ramdump，在我的手机里cpu占用特别离谱，关了没任何异常
 ```
 ## 关于logd:            
-&emsp;苦逼的作者在debug时发现surfaceflinger和system_server两大进程均检测到logdw套接字调用，如果直接屏蔽logd的话strace中会有相关报错日志，且lsp会严重炸日志，lspd也会疯狂调用日志系统，虽然并不占用cpu，但它会往日志文件里拉屎，因此如果你的手机logd占用并不离谱，不建议关闭。          
+&emsp;苦逼的作者在debug时发现surfaceflinger和system_server两大进程均检测到logdw套接字调用，如果直接屏蔽logd的话strace中会有相关报错日志，且lsp会严重炸日志，lspd也会疯狂调用日志系统，虽然并不占用cpu，但它会往日志文件里拉屎，如果尝试伪造logdw套接字会立即被删除，由于作者本人知识水平不足，放弃对logdw文件进行伪造，而是选择删掉logd屏蔽相关内容，因此如果你的手机logd占用并不离谱，不建议关闭。          
 &emsp;本模块已经移除logd直接关闭功能，因为实测对于作者本人的手机没有任何帮助，因此改为试图减少日志量，如有需要，请手动在模块根目录创建以下文件，内容随意，不是rm -rf /*啥的就行：         
 ```dircolors
 ./system/bin/logd
