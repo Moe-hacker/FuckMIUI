@@ -8,6 +8,18 @@
 ### Update 11.22: 系统精简加入MIUI13稳定版支持。       
 由于MIUI过于ex，系统精简目录在不同版本号下并不通用。       
 本次更新移除应用列表无变更，因此文件树说明并未更新。         
+增添部分可禁用应用列表：        
+```dircolors
+com.miui.daemon
+com.xiaomi.aiasst.service
+com.miui.contentcatcher
+com.google.android.printservice.recommendation
+com.google.android.onetimeinitializer
+com.google.android.configupdater
+com.android.vending
+com.android.htmlviewer
+```
+不提供直接移除，请手动pm disable。          
 ### &emsp;本模块内容均具有详细注释，不建议直接打包刷入，而是根据具体需要，结合注释和文档进行二创。          
 &emsp;本模块测试环境MIUI 13 22.10.26，核心破解3.9。            
 &emsp;本模块无版权限制，因为玄学优化部分来源于网络，做模块的总不能对非自己写的东西搞版权吧。             
